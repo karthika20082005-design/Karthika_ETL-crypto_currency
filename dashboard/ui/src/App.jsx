@@ -5,6 +5,8 @@ import PriceChart from './components/PriceChart'
 import TopMovers from './components/TopMovers'
 import AlertsFeed from './components/AlertsFeed'
 import PipelineStatus from './components/PipelineStatus'
+import FearGreed from './components/FearGreed'
+import Portfolio from './components/Portfolio'
 
 const REFRESH_MS = 30_000
 
@@ -140,7 +142,12 @@ export default function App() {
           </div>
           <PipelineStatus pipeline={pipeline} />
         </section>
+         <section className="grid grid-cols-1 gap-6 xl:grid-cols-2">
+          <FearGreed />
+          <Portfolio coins={coins} />
+        </section>
       </main>
     </div>
   )
 }
+

@@ -15,7 +15,8 @@ default_args = {
 }
 
 SPARK_SUBMIT_CMD = """
-/opt/spark-jobs/submit_analytics.sh
+touch /opt/spark-jobs/.analytics_trigger
+echo "Trigger file created successfully"
 """
 
 with DAG(

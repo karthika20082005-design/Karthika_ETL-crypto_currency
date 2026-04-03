@@ -124,9 +124,9 @@ services:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
     ports:
-      - "8080:8080"
+      - "8081:8080"
     entrypoint: /bin/bash
-    command: -c "exec airflow webserver --port 8080"
+    command: -c "exec airflow webserver --port 8080 --workers 1"
     restart: on-failure
 
   airflow-scheduler:
